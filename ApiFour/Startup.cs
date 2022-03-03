@@ -34,7 +34,8 @@ namespace ApiFour
 
             var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
             services.AddDbContext<AggDbContext>(options => options.UseNpgsql(connectionString).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
- 
+            services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin()); });
+            services.AddControllers();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -58,7 +59,8 @@ namespace ApiFour
             }
 
 
-
+            app.UseCors(cors => cors.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            app.UseAuthorization();
 
             //   app.UseHttpsRedirection();
 

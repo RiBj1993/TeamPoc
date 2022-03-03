@@ -1,5 +1,5 @@
 FROM node:14-alpine
-WORKDIR ./react_client/
+WORKDIR ./react_client/app/
 COPY ./react_client/package*.json ./
 RUN npm install
 
