@@ -25,14 +25,17 @@ namespace ApiFour
         {
 
             //not working  02/27/2022
-            return context.Todos.Where(b => DateTime.ParseExact(b.checkpoint, "MM/dd/yyyy", null) < DateTime.ParseExact(date1.ToShortDateString(), "MM/dd/yyyy", null))
-                                .Where(b => DateTime.ParseExact(b.checkpoint, "MM/dd/yyyy", null) < DateTime.ParseExact(date1.ToShortDateString(), "MM/dd/yyyy", null))
-                                .Select(c => new
-            {
+        
+
+            return context.Todos.ToList()
+                                .Select(c => new  {
                 NETWORK_SID = c.NETWORK_SID,
                 RSL_DEVIATION = c.RSL_DEVIATION,
                 checkpoint = c.checkpoint
-            }).ToList();
+            }).Where(b =>
+DateTime.Compare(DateTime.Parse(b.checkpoint).ToUniversalTime(),  date1.ToUniversalTime())>=0)
+         .Where(b =>
+DateTime.Compare(DateTime.Parse(b.checkpoint).ToUniversalTime(), date2.ToUniversalTime()) < 0);
         }
         public void AddAgg(AggDbContext context, Agg aGG_SLOT_HOURLY)
         {

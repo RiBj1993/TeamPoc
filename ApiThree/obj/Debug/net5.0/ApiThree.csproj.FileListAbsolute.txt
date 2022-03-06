@@ -34,3 +34,4 @@ C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.dll
 C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ref\ApiThree.dll
 C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.pdb
 C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.genruntimeconfig.cache
+C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.csproj.AssemblyReference.cache

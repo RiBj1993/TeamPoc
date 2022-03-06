@@ -72,3 +72,5 @@ D:\gitTeam-main\gitTeam-main\ApiOne\obj\Debug\net5.0\ref\ApiOne.dll
 D:\gitTeam-main\gitTeam-main\ApiOne\obj\Debug\net5.0\ApiOne.pdb
 D:\gitTeam-main\gitTeam-main\ApiOne\obj\Debug\net5.0\ApiOne.genruntimeconfig.cache
 D:\gitTeam-main\gitTeam-main\ApiOne\bin\Debug\net5.0\CsvHelper.dll
+C:\Users\rihab.Beji\source\repos\ApiOne\bin\Debug\net5.0\CsvHelper.dll
+C:\Users\rihab.Beji\source\repos\ApiOne\obj\Debug\net5.0\ApiOne.csproj.AssemblyReference.cache

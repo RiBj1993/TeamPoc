@@ -27,7 +27,7 @@ namespace ApiFour.Controllers
             AggRepository.AddAgg(_context, AGG_SLOT_HOURLY);
         }
 
-        [HttpPost("/getAllAggBetweenDatesNotWorking/")]
+        [HttpPost("/getAllAggBetweenDates/")]
         public object getAgg_Between_Date1_U_Date2([FromBody] Dates dates ) {
 
             return AggRepository.

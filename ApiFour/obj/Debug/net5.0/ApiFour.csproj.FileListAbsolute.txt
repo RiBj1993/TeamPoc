@@ -30,8 +30,9 @@ C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\staticwebassets\ApiFou
 C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\staticwebassets\ApiFour.StaticWebAssets.xml
 C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\scopedcss\bundle\ApiFour.styles.css
 C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\ApiFour.RazorTargetAssemblyInfo.cache
-C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\ApiFour.csproj.CopyComplete
 C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\ApiFour.dll
 C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\ref\ApiFour.dll
 C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\ApiFour.pdb
 C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\ApiFour.genruntimeconfig.cache
+C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\ApiFour.csproj.AssemblyReference.cache
+C:\Users\rihab.Beji\source\repos\ApiFour\obj\Debug\net5.0\ApiFour.csproj.CopyComplete
