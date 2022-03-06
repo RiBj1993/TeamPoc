@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ShdyQzPxkJWKL6qhdVygZNkCVDAYLMArH5R+UTS9ZyyyEguZvNjq44y5+vZ3cnFfQ+X1Zav3rQR29jflfyt7WQ==",
+  "dgSpecHash": "GInI+zOJCK+dTiEIzs4qiBQI6W9ZcEiptyA0koq6fsRos3197mTwZ6/JYZVgdpEWCoeQYpXtW8ybhqeaZBbKDA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rihab.Beji\\source\\repos\\ApiOne\\ApiOne.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rihab.Beji\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
     "C:\\Users\\rihab.Beji\\.nuget\\packages\\filehelpers\\3.5.1\\filehelpers.3.5.1.nupkg.sha512",
     "C:\\Users\\rihab.Beji\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rihab.Beji\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,6 +1,7 @@
 using ApiOne.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace ApiOne.Controllers
 {
@@ -10,15 +11,16 @@ namespace ApiOne.Controllers
          IInputRepository inputRepository;
         public InputController( )
         {
-           
+            inputRepository = new InputRepository();
+
         }
- 
- 
+
+
         [HttpPost("/generateFileInput/")]
         public void generateFileInput([FromBody] Ftp ftp)
-        { inputRepository.generateFileInput( ftp);}
+        {  inputRepository.generateFileInput(ftp);}
 
-     
+   
  
     }
 }

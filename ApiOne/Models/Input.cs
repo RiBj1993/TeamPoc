@@ -5,6 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ApiOne.Models
 {
 
+    //txt
+
     [DelimitedRecord(",")]
     public class Input
     {

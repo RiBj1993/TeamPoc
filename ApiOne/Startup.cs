@@ -23,8 +23,8 @@ namespace ApiOne
         {
 
             // Singleton
-            services.AddSingleton<ILinkRepository, LinkRepository>();
             services.AddSingleton<IInputRepository, InputRepository>();
+
 
             // Transient
             //services.AddTransient<ILog, FakeLog>();
@@ -32,7 +32,7 @@ namespace ApiOne
             // Scoped
             //services.AddScoped<ILog, FakeLog>();
 
-            
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -48,7 +48,7 @@ namespace ApiOne
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiTwo v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiOne v1"));
             }
             else
             {
