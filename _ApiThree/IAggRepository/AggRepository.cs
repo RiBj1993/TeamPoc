@@ -21,7 +21,7 @@ namespace ApiThree
             }).ToList();
         }
 
-        public object getAgg_Between_Date1_U_Date2(AggDbContext context, Dates date1, Dates date2)
+        public object getAgg_Between_Date1_U_Date2(AggDbContext context, DateTime date1, DateTime date2)
         {
 
             //not working  02/27/2022
@@ -29,8 +29,8 @@ namespace ApiThree
             {
                 NETWORK_SID = c.NETWORK_SID,
                 checkpoint = c.checkpoint,
-            }).ToList().Where(b => Dates.ParseExact(b.checkpoint, "yyyy/MM/dd", null) < Dates.ParseExact(date1.ToShortDateString(), "yyyy/MM/dd", null))
-                                .Where(b => DateTime.ParseExact(b.checkpoint, "yyyy/MM/dd", null) < Dates.ParseExact(date1.ToShortDateString(), "yyyy/MM/dd", null));
+            }).ToList().Where(b => DateTime.ParseExact(b.checkpoint, "MM/dd/yyyy", null) < DateTime.ParseExact(date1.ToShortDateString(), "MM/dd/yyyy", null))
+                                .Where(b => DateTime.ParseExact(b.checkpoint, "MM/dd/yyyy", null) < DateTime.ParseExact(date1.ToShortDateString(), "MM/dd/yyyy", null));
                                 
         }
         public void AddAgg(AggDbContext context, Agg aGG_SLOT_HOURLY)
@@ -39,7 +39,7 @@ namespace ApiThree
             context.SaveChanges();
         }
 
-       public  Agg update(AggDbContext context, InputDbContext _contextInput, RadioDbContext _contextRadio)
+       public  void update(AggDbContext context, InputDbContext _contextInput, RadioDbContext _contextRadio)
         {
             var showPiece = _contextInput.Todos.Select(c => new
             {
@@ -62,18 +62,10 @@ namespace ApiThree
             // .OrderByDescending(p => p.Date)
 
             Agg Y = new Agg( );
-            float x = float.Parse(showPiece.MeanRxLevel1m) - float.Parse(showPiece2.MaxRxLevel);
-            //float y = 3;
-            Y.RSL_DEVIATION = Convert.ToString(x);
-            Y.checkpoint =  DateTime.Now.ToShortDateString();
+            Y.RSL_DEVIATION = ""+ (float.Parse(showPiece.MeanRxLevel1m)- float.Parse(showPiece2.MaxRxLevel));
+            Y.checkpoint = ""+ DateTime.Now.ToShortDateString();
             context.Add(Y);
             context.SaveChanges();
-            return Y;
-          //  var resOne = context.Todos.Where(x=> x.checkpoint == date).FirstOrDefault();
-            //var resList = context.Todos.Where(x=> x.checkpoint == date);
-
         }
     }
-
-
 }
