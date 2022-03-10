@@ -21,18 +21,7 @@ namespace ApiThree
             }).ToList();
         }
 
-        public object getAgg_Between_Date1_U_Date2(AggDbContext context, Dates date1, Dates date2)
-        {
-
-            //not working  02/27/2022
-            return context.Todos.Select(c => new
-            {
-                NETWORK_SID = c.NETWORK_SID,
-                checkpoint = c.checkpoint,
-            }).ToList().Where(b => Dates.ParseExact(b.checkpoint, "yyyy/MM/dd", null) < Dates.ParseExact(date1.ToShortDateString(), "yyyy/MM/dd", null))
-                                .Where(b => DateTime.ParseExact(b.checkpoint, "yyyy/MM/dd", null) < Dates.ParseExact(date1.ToShortDateString(), "yyyy/MM/dd", null));
-                                
-        }
+  
         public void AddAgg(AggDbContext context, Agg aGG_SLOT_HOURLY)
         {
             context.Add(aGG_SLOT_HOURLY);
@@ -65,7 +54,7 @@ namespace ApiThree
             float x = float.Parse(showPiece.MeanRxLevel1m) - float.Parse(showPiece2.MaxRxLevel);
             //float y = 3;
             Y.RSL_DEVIATION = Convert.ToString(x);
-            Y.checkpoint =  DateTime.Now.ToShortDateString();
+            Y.checkpoint =""+ DateTime.Now.ToShortDateString();
             context.Add(Y);
             context.SaveChanges();
             return Y;

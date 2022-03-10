@@ -30,11 +30,6 @@ namespace ApiThree.Controllers
         [HttpPost("/AddAgg/")]
         public void PostAGG_SLOT_HOURLY([FromBody] Agg AGG_SLOT_HOURLY) { AggRepository.AddAgg(_context, AGG_SLOT_HOURLY);}
 
-        [HttpPost("/getAgg_Between_Date1_U_Date2/")]
-        public object getAGG_SLOT_HOURL_Between_Date1_U_Date2([FromBody] Dates dates ) {
-
-            return AggRepository.getAgg_Between_Date1_U_Date2(_context, dates.date1, dates. date2);
-        }
 
 
     //    [HttpPut("/update/{{date}}")]

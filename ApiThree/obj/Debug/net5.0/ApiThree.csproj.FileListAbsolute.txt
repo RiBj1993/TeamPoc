@@ -1,0 +1,7 @@
+C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.csproj.AssemblyReference.cache
+C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.AssemblyInfoInputs.cache
+C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.AssemblyInfo.cs
+C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.csproj.CoreCompileInputs.cache
+C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rihab.Beji\source\repos\ApiThree\obj\Debug\net5.0\ApiThree.MvcApplicationPartsAssemblyInfo.cache

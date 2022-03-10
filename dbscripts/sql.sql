@@ -60,20 +60,22 @@ ALTER TABLE TRANS_MW_AGG_SLOT_HOURLY OWNER TO postgres;
 
 
 Insert into TRANS_MW_ERC_PM_WAN_RFINPUTPOWER(NeId,NodeName,Object,Time,Interval,Direction,NeAlias,NeType,Position,RxLevelBelowTS1,RxLevelBelowTS2,MinRxLevel,MaxRxLevel,TxLevelAboveTS1,MinTxLevel,MaxTxLevel,IdLogNum,FailureDescription
-) values( '1','NodeName','Object','Time','Interval','Direction','NeAlias','NeType','Position','RxLevelBelowTS1','RxLevelBelowTS2','MinRxLevel','MaxRxLevel','TxLevelAboveTS1','MinTxLevel','MaxTxLevel','IdLogNum','FailureDescription');
+) values( '1','NodeName','Object','Time','Interval','Direction','NeAlias','NeType','Position','RxLevelBelowTS1','RxLevelBelowTS2','9','700','TxLevelAboveTS1','MinTxLevel','MaxTxLevel','IdLogNum','FailureDescription');
  
  Insert into TRANS_MW_ERC_PM_WAN_RFINPUTPOWER(NeId,NodeName,Object,Time,Interval,Direction,NeAlias,NeType,Position,RxLevelBelowTS1,RxLevelBelowTS2,MinRxLevel,MaxRxLevel,TxLevelAboveTS1,MinTxLevel,MaxTxLevel,IdLogNum,FailureDescription
-) values( '2','NodeName','Object','Time','Interval','Direction','NeAlias','NeType','Position','RxLevelBelowTS1','RxLevelBelowTS2','MinRxLevel','MaxRxLevel','TxLevelAboveTS1','MinTxLevel','MaxTxLevel','IdLogNum','FailureDescription');
+) values( '2','NodeName','Object','Time','Interval','Direction','NeAlias','NeType','Position','RxLevelBelowTS1','RxLevelBelowTS2','10','800','TxLevelAboveTS1','MinTxLevel','MaxTxLevel','IdLogNum','FailureDescription');
  
-Insert into TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (NeId, NodeName, Object, Time, Interval, Direction, NeAlias, NeType, Position, RFInputPower, MeanRxLevel1m, IdLogNum ,TID, FarEndTID,FailureDescription) values( '1', 'NodeName', 'Object', 'Time', 'Interval', 'Direction', 'NeAlias', 'NeType', 'Position', 'RFInputPower', 'MeanRxLevel1m', 'IdLogNum', 'TID', 'FarEndTID','FailureDescription');
-Insert into TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (NeId, NodeName, Object, Time, Interval, Direction, NeAlias, NeType, Position, RFInputPower, MeanRxLevel1m, IdLogNum ,TID, FarEndTID,FailureDescription) values( '1', 'NodeName', 'Object', 'Time', 'Interval', 'Direction', 'NeAlias', 'NeType', 'Position', 'RFInputPower', 'MeanRxLevel1m', 'IdLogNum', 'TID', 'FarEndTID','FailureDescription');
+Insert into TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (NeId, NodeName, Object, Time, Interval, Direction, NeAlias, NeType, Position, RFInputPower, MeanRxLevel1m, IdLogNum ,TID, FarEndTID,FailureDescription) values( '1', 'NodeName', 'Object', 'Time', 'Interval', 'Direction', 'NeAlias', 'NeType', 'Position', 'RFInputPower', '11', 'IdLogNum', 'TID', 'FarEndTID','FailureDescription');
+Insert into TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (NeId, NodeName, Object, Time, Interval, Direction, NeAlias, NeType, Position, RFInputPower, MeanRxLevel1m, IdLogNum ,TID, FarEndTID,FailureDescription) values( '1', 'NodeName', 'Object', 'Time', 'Interval', 'Direction', 'NeAlias', 'NeType', 'Position', 'RFInputPower', '11', 'IdLogNum', 'TID', 'FarEndTID','FailureDescription');
 
  
 
-Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '1','2005-01-01');
-Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '1','2005-01-01');
-Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '2','2005-01-01');
-Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '2','2005-01-01');
-Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '3','2005-01-01');
-Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '3','2005-01-01');
+Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '1','2001-01-01');
+Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '4','2002-01-01');
+Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '2','2003-01-01');
+Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '0','2004-01-01');
+Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '12','2007-01-01');
+Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '10','2018-01-01');
+Insert into TRANS_MW_AGG_SLOT_HOURLY(RSL_DEVIATION,checkpoint) values( '44','2033-01-01');
+
 
