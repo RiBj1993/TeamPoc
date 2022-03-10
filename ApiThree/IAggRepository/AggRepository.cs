@@ -3,6 +3,7 @@ using ApiThree.Models;
 using FileHelpers;
  using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -54,7 +55,7 @@ namespace ApiThree
             float x = float.Parse(showPiece.MeanRxLevel1m) - float.Parse(showPiece2.MaxRxLevel);
             //float y = 3;
             Y.RSL_DEVIATION = Convert.ToString(x);
-            Y.checkpoint =""+ DateTime.Now.ToShortDateString();
+            Y.checkpoint =""+ DateTime.Today.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture); ;
             context.Add(Y);
             context.SaveChanges();
             return Y;
