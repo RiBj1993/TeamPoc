@@ -55,7 +55,7 @@ namespace ApiThree
             float x = float.Parse(showPiece.MeanRxLevel1m) - float.Parse(showPiece2.MaxRxLevel);
             //float y = 3;
             Y.RSL_DEVIATION = Convert.ToString(x);
-            Y.checkpoint =""+ DateTime.Today.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture); ;
+            Y.checkpoint =""+ DateTime.Today.ToString("yyyy-dd-MM", CultureInfo.InvariantCulture); ;
             context.Add(Y);
             context.SaveChanges();
             return Y;
