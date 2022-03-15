@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-EXPOSE 9001
+EXPOSE 9009
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["./ApiOne/ApiOne.csproj", "."]
@@ -20,5 +20,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "ApiOne.dll"]
-ENV ASPNETCORE_URLS=http://+:9001
+ENV ASPNETCORE_URLS=http://+:9009
 ENV ASPNETCORE_ENVIRONMENT=Development 

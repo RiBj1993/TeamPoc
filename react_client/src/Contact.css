@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+  }
+  .bg-image{
+    /* background properties */
+    background-image: url("https://i.pinimg.com/originals/a4/51/53/a45153abe08627e793626a12a931ea08.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* display properties */
+    height: 100vh;
+    filter: blur(8px);
+  }
+
+  .bg-text{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    text-align: center;
+    color: aliceblue;
+    font-weight:600;
+    box-shadow: 10px 10px 30px black;
+    padding: 3rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-shadow: 1px 1px 3px black;
+  }
+
+  .contactIcons{
+    font-size: 2.5rem;
+  }
+
+  @media screen and (min-width:100px) and (max-width:500px){
+    .bg-text{
+      width: 90%;
+      top: 80%;
+    }
+    .postTitle{
+      font-size: 1.8rem;
+    }
+    .linkText{
+      font-size: 0.7rem;
+    }
+    .contactIcons{
+      font-size: 1.5rem;
+    }
+  }

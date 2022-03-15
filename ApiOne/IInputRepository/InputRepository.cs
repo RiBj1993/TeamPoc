@@ -39,8 +39,29 @@ namespace ApiOne
                         file = "RADIO_LINK_POWER";
                     else if (ftp.remoteFilename == "SOEM1_TN_RFInputPower_20210121_051500.txt")
                         file = "RF_INPUT_POWER";
+                    StreamReader readerr = new StreamReader(DownloadFileFTP(ftp));
+                        List<string> li= new List<string>();
+                    string line;
+                    while ((line = readerr.ReadLine()) != null)
+                    {
+                        li.Add(line);
 
-                    remove_row_by_header(getDataByFileName(csv.GetRecords<Radio>(),file),ftp,file);
+                    }
+                    string f = "";
+                        foreach (Radio rad in records)
+                    {
+                        if (rad.Name_file == file)
+                        {
+                            if (rad.Status == "DISABLED")
+                                li = remove_row_by_header(rad.Header, li);
+
+                            f = rad.Name_file;
+                        }
+                    }
+                    string filename = String.Format(file + DateTime.UtcNow.ToString("yyyyMMdd_HHmmss") + ".csv");
+
+                    CreateFile(li, filename, ftp);
+
 
                 }
 
@@ -66,30 +87,22 @@ namespace ApiOne
 
         }
 
-        private void remove_row_by_header(IEnumerable<Radio> records,Ftp ftp,string filee)
+        private List<string> remove_row_by_header(string target,List<string> li)
         {
 
 
-            string name_file = "";
-            string target = "";
+            //string target = "";
             List<string> lines = new List<string>();
-            foreach (Radio rad in records)
-            {
-                if (rad.Name_file == filee)
-                {
-                    if (rad.Status == "DISABLED")
-                    {
-                        target = rad.Header;//the name of the column to skip
-                        using (StreamReader reader = new StreamReader(DownloadFileFTP(ftp)))
-                        {
+           
+                       
                             // string target = "";//the name of the column to skip
 
                             int? targetPosition = null; //this will be the position of the column to remove if it is available in the csv file
-                            string line;
 
                             List<string> collected = new List<string>();
-                            while ((line = reader.ReadLine()) != null)
-                            {
+
+            foreach (string line in li)
+            { 
 
                                 string[] split = line.Split(',');
                                 collected.Clear();
@@ -119,38 +132,12 @@ namespace ApiOne
                                 lines.Add(string.Join(",", collected));
 
 
+                     
+                
 
-                            }
-                        }
-
-                    }
-                }
-
-                name_file = rad.Name_file;
 
             }
-
-
-
-            //
-            string filename = String.Format(name_file + DateTime.UtcNow.ToString("yyyyMMdd_HHmmss") + ".csv");
-
-            CreateFile(lines, filename,ftp);
-
-
-
-
-            /* string loc_file = @"D:\testCSV\" + filename;
-
-             using (StreamWriter writer = new StreamWriter(@"D:\testCSV\" + filename, false))
-             {
-                 foreach (string line in lines)
-                     writer.WriteLine(line);
-
-             }
-
-             ftp.AddFile(loc_file, parms);*/
-
+            return lines;
 
 
         }

@@ -3,9 +3,15 @@ import 'react-calendar/dist/Calendar.css';
 import './App.css';
 import StockChart from "./components/stockChart";
 import React, { useState,useEffect, useRef, useCallback, useMemo } from "react";
- 
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { MdOutgoingMail } from "react-icons/md";
+import { AiFillLinkedin } from "react-icons/ai";
+import { BsInstagram } from "react-icons/bs";
+import "./Contact.css";
 import {variables} from './Variables.js';
 function App() {
+  const [display, setDiplay] = useState(false);
+
   const [date, setDate] = useState([
     new Date(2005, 6, 1),
     new Date(2050, 6, 10),
@@ -147,9 +153,18 @@ async function get( startDate,endDate){
   /****************************************** */
   return (
 
+    <div>
+    <div className="bg-image"></div>
+    <div className="bg-text">
+      <h2 className="text-2xl py-3">In Insight</h2>
+      <h1 className="text-4xl py-3 postTitle">Harness the power of change</h1>
 
-<div>
-<div className="min-w-screen  bg-yellow-100  flex items-center justify-center p20-5 py-1">
+      <div
+        style={{ display: display ? "flex" :"flex" }}
+        className="flex justify-center align-middle my-4 p-2"
+      >
+          <form className="min-w-screen   flex items-center justify-center p20-5 py-1" >
+    <div className="min-w-screen    flex items-center justify-center p20-5 py-1">
   
 <div className='app'>
       <h1 className='text-center'> </h1>
@@ -187,12 +202,19 @@ async function get( startDate,endDate){
  
       </div>
       
-<div className="min-w-screen  bg-yellow-200  flex items-center justify-center px-5 py-5">
+<div className="min-w-screen    flex items-center justify-center px-5 py-5">
 
 <StockChart info={data.ob} />
 
 </div> 
-</div> 
+</form> 
+      </div>
+     
+      
+    </div>
+  </div>
+
+   
   );
 }
 
