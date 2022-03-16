@@ -1,6 +1,6 @@
 import ChartLine from 'components/ChartLine';
 import ChartBar from 'components/ChartBar';
-import './AppC.css';
+import './App.css';
 
 import { useEffect,useState } from 'react';
 import Chart from 'chart.js';
@@ -144,31 +144,39 @@ const onChange = (dates) => {
     <div className="container mx-auto max-w-full">
         <div className="grid grid-cols-1 xl:grid-cols-5">
             <div className="xl:col-start-1 xl:col-end-4 px-4 mb-14">
-            <ChartLine  info={data.ob}/>
-            </div>
-            <div className="xl:col-start-4 xl:col-end-6 px-4 mb-14">
-            
-            
+
             <Card>
-            <CardHeader color="blue" contentPosition="left">
-                
-                <h6 className="text-white text-2xl">Calander</h6>
+            <CardHeader color="orange" contentPosition="left">
+                <h6 className="uppercase text-gray-200 text-xs font-medium">
+                    Overview
+                </h6>
+                <h2 className="text-white text-2xl">Sales value</h2>
             </CardHeader>
             <CardBody>
                 <div className="relative h-96">
-                <div>
-    <div className="bg-image"></div>
-    <div className="bg-text">
+                <ChartLine  info={data.ob}/>
+                </div>
+            </CardBody>
+        </Card>
 
-      <div
-        style={{ display: display ? "flex" :"flex" }}
-        className="flex justify-center align-middle my-4 p-2"
-      >
-          <form className="min-w-screen   flex items-center justify-center p20-5 py-1" >
-    <div className="min-w-screen    flex items-center justify-center p20-5 py-1">
-  
-<div className='app'>
-      <h1 className='text-center'> </h1>
+        </div>   </div>   </div>   </div>
+                       
+                       
+        <div className="px-3 md:px-8 -mt-24">
+    <div className="container mx-auto max-w-full">
+        <div className="grid grid-cols-1 xl:grid-cols-5">
+            <div className="xl:col-start-1 xl:col-end-4 px-4 mb-14">                      
+                       
+                       
+                        <Card>
+            <CardHeader color="pink" contentPosition="left">
+                <h6 className="uppercase text-gray-200 text-xs font-medium">
+                This is the calendar
+                </h6>
+    </CardHeader>
+            <CardBody>
+                <div className="relative h-96">
+                <div className='app'>
       <div className='calendar-container'>
         <Calendar
                 onChange={onChange}
@@ -198,25 +206,15 @@ const onChange = (dates) => {
       )}
       
       
-      </div>
-
- 
-      </div>
-      
+      </div>  
 
 
-</form> 
-      </div>
-     
-      
-    </div>
-  </div>                </div>
-            </CardBody>
-        </Card>
-            </div>
-        </div>
-    </div>
 </div>
+            </CardBody>
+        </Card>                        </div>
+                    </div>
+                </div>
+            </div>
 
             
         </>

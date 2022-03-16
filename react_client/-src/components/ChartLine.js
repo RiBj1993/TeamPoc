@@ -64,20 +64,13 @@ const ChartLine = ({info}) => {
     return (
         <>
 
+<div className="rounded shadow-xl overflow-hidden w-full md:flex" style={{ maxWidth: '500px' }}>
+                <div className="flex w-full md:px-5 pb-4 pt-8 bg-indigo-500 text-white items-center">
+                <Line type="line" data={data} options={options} />
 
-<Card>
-            <CardHeader color="blue" contentPosition="left">
-               
-                <h2 className="text-white text-2xl">KPI REPPROT</h2>
-            </CardHeader>
-            <CardBody>
-                <div className="relative h-100 w-100">
-                <div className="flex w-full md: px-5 pb-4 pt-8 bg-indigo-500 text-white items-center">
-                    <Line type="line" data={data} options={options} />
+                </div>
+                </div>
 
-                </div>                </div>
-            </CardBody>
-        </Card>
 
 
 
