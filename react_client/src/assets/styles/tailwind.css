@@ -2360,9 +2360,16 @@ video {
 	.md\:w-1\/2{
 		width: 50%;
 	}
+	.md\:w-1{
+		width: 0.25rem;
+	}
 	.md\:px-8{
 		padding-left: 2rem;
 		padding-right: 2rem;
+	}
+	.md\:px-5{
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
 	}
 	.md\:pr-8{
 		padding-right: 2rem;

@@ -64,8 +64,8 @@ const ChartLine = ({info}) => {
     return (
         <>
 
-<div className="rounded shadow-xl overflow-hidden w-full md:flex" style={{ maxWidth: '900px' }}>
-                <div className="flex w-full md:w-1/2 px-5 pb-4 pt-8 bg-indigo-500 text-white items-center">
+<div className="rounded shadow-xl overflow-hidden w-full md:flex" style={{ maxWidth: '500px' }}>
+                <div className="flex w-full md:px-5 pb-4 pt-8 bg-indigo-500 text-white items-center">
                 <Line type="line" data={data} options={options} />
 
                 </div>
